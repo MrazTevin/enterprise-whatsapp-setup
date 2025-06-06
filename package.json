@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export-docs": "npm run build && rm -rf docs && cp -r out docs"
   },
   "dependencies": {
     "react": "^19.0.0",
