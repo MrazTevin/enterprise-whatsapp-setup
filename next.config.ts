@@ -1,7 +1,6 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export',
   trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
@@ -10,10 +9,10 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    unoptimized: true, // Optional: only use if you're avoiding Vercel image optimization
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/whatsapp-pitch-deck' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/whatsapp-pitch-deck' : '',
-}
+  assetPrefix: '',
+  basePath: '',
+};
 
-export default nextConfig
+export default nextConfig;
